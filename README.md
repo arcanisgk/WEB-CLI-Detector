@@ -40,7 +40,7 @@ composer require arcanisgk/web-cli-detector --dev
 
 ```php
 
-use IcarosNet\WebCLIDetector\WebCLIDetector;
+use IcarosNet\Utilities\WebCLIDetector;
 require __DIR__.'\..\vendor\autoload.php';
 $wc_detector = new WebCLIDetector();
 
