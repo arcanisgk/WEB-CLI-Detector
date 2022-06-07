@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP Version required 7.4.* or higher
  * This example shows how the WebCLIDetector class and its function/methods are declared.
  *
- * @see https://github.com/IcarosNetSA/BOH-Basic-Output-Handler
+ * @see https://github.com/arcanisgk/WEB-CLI-Detector
  *
  * @author    Walter Nuñez (arcanisgk/original founder)
  * @email     icarosnet@gmail.com
@@ -18,7 +18,7 @@ declare(strict_types=1);
  *            or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-namespace IcarosNet\WebCLIDetector;
+namespace IcarosNet\Utilities;
 
 /**
  * WebCLIDetector Class.
