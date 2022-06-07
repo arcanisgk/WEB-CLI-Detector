@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /**
  * WebCLIDetector - Web and CLI Detector in PHP Development Environments.
@@ -23,6 +25,19 @@ namespace IcarosNet\WebCLIDetector;
  */
 class WebCLIDetector
 {
+
+    /**
+     * @const string
+     */
+
+    private const ENV_CLI = 'CLI';
+
+    /**
+     * @const string
+     */
+
+    private const ENV_WEB = 'WEB';
+
     /**
      * Description: instantiate Class Static.
      * @var WebCLIDetector|null $instance
@@ -36,23 +51,22 @@ class WebCLIDetector
      *  - WEB
      * @var string
      */
+
     private string $environment;
 
     /**
      * construct of class
      */
+
     public function __construct()
     {
-        if ($this->evaluateEnvironment()) {
-            $this->setEnvironment('CLI');
-        } else {
-            $this->setEnvironment('WEB');
-        }
+        $this->setEnvironment($this->evaluateEnvironment() ? $this::ENV_CLI : $this::ENV_WEB);
     }
 
     /**
      * @return string
      */
+
     public function getEnvironment(): string
     {
         return $this->environment;
@@ -61,6 +75,7 @@ class WebCLIDetector
     /**
      * @param string $environment
      */
+
     private function setEnvironment(string $environment): void
     {
         $this->environment = $environment;
@@ -70,9 +85,9 @@ class WebCLIDetector
      * Description: Determinate if Running from Terminal/Command-Line Environment or Web by default.
      * @return bool
      */
+
     private function evaluateEnvironment(): bool
     {
-
         return defined('STDIN')
             || php_sapi_name() === "cli"
             || (stristr(PHP_SAPI, 'cgi') && getenv('TERM'))
@@ -82,30 +97,32 @@ class WebCLIDetector
     /**
      * @return bool
      */
+
     public function isCLI(): bool
     {
-        return ($this->getEnvironment() === 'CLI');
+        return ($this->getEnvironment() === $this::ENV_CLI);
     }
 
     /**
      * @return bool
      */
+
     public function isWEB(): bool
     {
-        return ($this->getEnvironment() === 'WEB');
+        return ($this->getEnvironment() === $this::ENV_WEB);
     }
 
     /**
      * Description: Auto-Instance Helper for static development.
+     * @return WebCLIDetector
      */
 
     public static function getInstance(): WebCLIDetector
     {
         if (!self::$instance instanceof self) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
     }
-
 }

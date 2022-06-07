@@ -62,6 +62,19 @@ echo 'Get Raw Environment: '.$wc_detector->getEnvironment();
 
 ```
 
+### Other Way to implement:
+
+this is an option to instance and validate in one line
+
+```php
+
+if (WebCLIDetector::getInstance()->isCLI()) {
+
+    //your logic
+
+}
+```
+
 ### Example Output:
 
 CLI Test
