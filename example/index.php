@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use IcarosNet\Utilities\WebCLIDetector;
+use IcarosNet\WebCLIToolKit\WebCLIDetector;
 
 require_once __DIR__."/../vendor/autoload.php";
 

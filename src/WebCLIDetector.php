@@ -18,7 +18,7 @@ declare(strict_types=1);
  *            or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-namespace IcarosNet\Utilities;
+namespace IcarosNet\WebCLIToolKit;
 
 /**
  * WebCLIDetector Class.
