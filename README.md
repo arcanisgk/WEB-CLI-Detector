@@ -30,8 +30,6 @@ None necessary.
 
 ```cmd
 composer require arcanisgk/web-cli-detector
-or 
-composer require arcanisgk/web-cli-detector --dev
 ```
 
 ## *[WEB-CLI-Detector]* Usage:
@@ -40,7 +38,7 @@ composer require arcanisgk/web-cli-detector --dev
 
 ```php
 
-use IcarosNet\Utilities\WebCLIToolKit\WebCLIDetector;
+use IcarosNet\WebCLIToolKit\WebCLIDetector;
 require __DIR__.'\..\vendor\autoload.php';
 $wc_detector = new WebCLIDetector();
 
