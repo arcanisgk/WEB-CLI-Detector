@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * WebCLIDetector - Web and CLI Detector in PHP Development Environments.
  * PHP Version required 7.4.* or higher
@@ -18,21 +16,25 @@ declare(strict_types=1);
  *            or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
+declare(strict_types=1);
+
 namespace IcarosNet\WebCLIToolKit;
 
 /**
- * WebCLIDetector Class.
+ * Description: Class WebCLIDetector.
+ * @package IcarosNet\WebCLIToolKit
  */
 class WebCLIDetector
 {
-
     /**
+     * Description: constant that sets the 'CLI' string
      * @const string
      */
 
     private const ENV_CLI = 'CLI';
 
     /**
+     * Description: constant that sets the 'WEB' string
      * @const string
      */
 
@@ -55,7 +57,7 @@ class WebCLIDetector
     private string $environment;
 
     /**
-     * construct of class
+     * Description: construct of class
      */
 
     public function __construct()
@@ -64,6 +66,7 @@ class WebCLIDetector
     }
 
     /**
+     * Description: getter of environment
      * @return string
      */
 
@@ -73,6 +76,7 @@ class WebCLIDetector
     }
 
     /**
+     * Description: setter of environment
      * @param string $environment
      */
 
@@ -95,6 +99,7 @@ class WebCLIDetector
     }
 
     /**
+     * Description: Validation of CLI Environment.
      * @return bool
      */
 
@@ -104,6 +109,7 @@ class WebCLIDetector
     }
 
     /**
+     * Description: Validation of WEB Environment.
      * @return bool
      */
 
@@ -113,7 +119,7 @@ class WebCLIDetector
     }
 
     /**
-     * Description: Auto-Instance Helper for static development.
+     * Description: Auto-Instance Helper for static development class WebCLIDetector.
      * @return WebCLIDetector
      */
 
